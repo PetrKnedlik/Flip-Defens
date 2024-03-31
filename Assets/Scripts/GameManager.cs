@@ -1,13 +1,13 @@
 using UnityEngine;
-using UnityEngine.UI; // Include this if you're using UI elements for the message
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance; // Singleton pattern to easily access the instance of the GameManager
 
-    public Text winMessage; // Assign a UI Text component in the Inspector
+    public Canvas gameOverCanvas;
     private int enemiesDestroyed = 0;
-    public int winCondition = 10; // Number of enemies to destroy to win
+    public int winCondition; // Number of enemies to destroy to win
 
     void Awake()
     {
@@ -21,7 +21,7 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
         }
 
-        winMessage.gameObject.SetActive(false); // Make sure the win message is hidden initially
+        gameOverCanvas.gameObject.SetActive(false);
     }
 
     public void EnemyDestroyed()
@@ -35,7 +35,8 @@ public class GameManager : MonoBehaviour
 
     void WinGame()
     {
-        winMessage.gameObject.SetActive(true); // Show the win message
+        gameOverCanvas.gameObject.SetActive(true); // Show the win message
         // Optionally, add more logic here for what happens when the player wins (stop game, show menu, etc.)
+        Time.timeScale = 0f; // Stop the game
     }
 }

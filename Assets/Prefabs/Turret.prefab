@@ -338,8 +338,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 3367952619321449962, guid: 67b4a1bc4842ff54d8216486a38f70a6, type: 3}
-  fireRate: 1
-  detectionRange: 4
+  fireRate: 4
+  detectionRange: 4.2
 --- !u!1 &3479217705144466827
 GameObject:
   m_ObjectHideFlags: 0
