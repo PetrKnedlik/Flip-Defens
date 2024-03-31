@@ -29,16 +29,18 @@ public class GameManager : MonoBehaviour
         enemiesDestroyed++;
         if (enemiesDestroyed >= winCondition)
         {
-            WinGame();
+            GameOver();
         }
     }
 
-    void WinGame()
+    void GameOver()
     {
+        Time.timeScale = 0f;
+
         if (gameOverScreenPrefab != null)
         {
             GameObject gameOverInstance = Instantiate(gameOverScreenPrefab);
-            gameOverInstance.GetComponent<Canvas>().enabled = true; // Force canvas visibility
+            gameOverInstance.GetComponent<Canvas>().enabled = true;
             gameOverInstance.SetActive(true);
         }
     }
