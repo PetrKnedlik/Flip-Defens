@@ -353,6 +353,7 @@ Transform:
   m_Children:
   - {fileID: 1823906059}
   - {fileID: 1816616042}
+  - {fileID: 1105715718}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &286242821
@@ -1006,6 +1007,50 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1743694718}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1105715717
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1105715718}
+  - component: {fileID: 1105715719}
+  m_Layer: 0
+  m_Name: LevelRestart
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1105715718
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1105715717}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 148039602}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1105715719
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1105715717}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5632408fe5b2a144adb18c4e9ec745a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1109207171
 GameObject:
   m_ObjectHideFlags: 0
@@ -1678,8 +1723,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4010afc94e244f74998707277d714604, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameOverCanvas: {fileID: 7544287613560615946, guid: bb3be9eedf1ddbf47b168a3f5bb40b66, type: 3}
-  winCondition: 5
+  gameOverScreenPrefab: {fileID: 3658027716547300307, guid: bb3be9eedf1ddbf47b168a3f5bb40b66, type: 3}
+  winCondition: 3
 --- !u!1 &1823906056
 GameObject:
   m_ObjectHideFlags: 0

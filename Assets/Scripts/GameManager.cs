@@ -4,8 +4,8 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance; // Singleton pattern to easily access the instance of the GameManager
-
-    public Canvas gameOverCanvas;
+    public GameObject gameOverScreenPrefab;
+    // public Canvas gameOverCanvas;
     private int enemiesDestroyed = 0;
     public int winCondition; // Number of enemies to destroy to win
 
@@ -21,7 +21,7 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
         }
 
-        gameOverCanvas.gameObject.SetActive(false);
+        gameOverScreenPrefab.gameObject.SetActive(false);
     }
 
     public void EnemyDestroyed()
@@ -35,8 +35,11 @@ public class GameManager : MonoBehaviour
 
     void WinGame()
     {
-        gameOverCanvas.gameObject.SetActive(true); // Show the win message
-        // Optionally, add more logic here for what happens when the player wins (stop game, show menu, etc.)
-        Time.timeScale = 0f; // Stop the game
+        if (gameOverScreenPrefab != null)
+        {
+            GameObject gameOverInstance = Instantiate(gameOverScreenPrefab);
+            gameOverInstance.GetComponent<Canvas>().enabled = true; // Force canvas visibility
+            gameOverInstance.SetActive(true);
+        }
     }
 }
