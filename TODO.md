@@ -1,6 +1,11 @@
 //Checkboxes
 - [x] MVP
-- [ ] Wave 1
-    - [ ] Victory at 10 killed enemies
+- [x] Wave 1
+    - [x] Victory at 10 killed enemies
+- [x] Restart level
 - [ ] DragAndDrop Turrets
-- [ ] Task 3
+- [ ] Placements of turrets
+- [ ] 3 types of turrets
+- [ ] 10 waves
+- [ ] Boss
+- [ ] Base Health

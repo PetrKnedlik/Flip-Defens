@@ -2,10 +2,20 @@ using UnityEngine;
 
 public class PauseMenu : MonoBehaviour
 {
-
-    public GameObject pauseMenuPrefab; // Add this line
     public static bool isGamePaused = false; // Tracks the pause state
-    public GameObject pauseMenuCanvas;
+    public GameObject pauseMenuPrefab; // Add this line
+    GameObject pauseMenuInstance; // To store the instantiated object
+
+    void Start() // Or use Awake() if you prefer
+    {
+        if (pauseMenuPrefab != null)
+        {
+            pauseMenuInstance = Instantiate(pauseMenuPrefab);
+            pauseMenuInstance.SetActive(false); // Initially hide it
+        }
+
+        pauseMenuInstance.name = pauseMenuPrefab.name;
+    }
 
     void Update()
     {
@@ -22,20 +32,29 @@ public class PauseMenu : MonoBehaviour
         }
     }
 
-    public void ResumeGame()
+public void ResumeGame()
+{
+
+    if (pauseMenuInstance != null)
     {
-        pauseMenuCanvas.SetActive(false);
-        Time.timeScale = 1f;
-        isGamePaused = false;
-    }
+        pauseMenuInstance.SetActive(false); // No need to find the Canvas separately
+    } else {
+        Debug.LogWarning("Pause Menu instance reference is null.");
+    } 
+
+    Time.timeScale = 1f;
+    isGamePaused = false;
+}
+
 
     void PauseGame()
     {
-        if (pauseMenuPrefab != null)
+        if (pauseMenuInstance != null) // Use the stored instance
         {
-            Instantiate(pauseMenuPrefab);
+            pauseMenuInstance.SetActive(true);
         }
         Time.timeScale = 0f;
         isGamePaused = true;
     }
+
 }
