@@ -9,3 +9,5 @@
 - [ ] 10 waves
 - [ ] Boss
 - [ ] Base Health
+- [ ] Don't show any menus when the game is over
+- [x] Game Over

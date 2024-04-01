@@ -458,7 +458,7 @@ GameObject:
   - component: {fileID: 8754974375193905786}
   - component: {fileID: 78048547406835393}
   m_Layer: 5
-  m_Name: Restart
+  m_Name: Resume
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -806,7 +806,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &355453657668730840
 RectTransform:
   m_ObjectHideFlags: 0
@@ -907,8 +907,9 @@ GameObject:
   - component: {fileID: 1362375752402891834}
   - component: {fileID: 6233567716268581911}
   - component: {fileID: 8124438720108384881}
+  - component: {fileID: 2074987717782178114}
   m_Layer: 5
-  m_Name: Resume
+  m_Name: ResumeBtn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1015,19 +1016,20 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6233567716268581911}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 7496862219055966462}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
+--- !u!114 &2074987717782178114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7616836531932763421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee3fc5c8749b83d47a7eb158cae3b35a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pauseMenu: {fileID: 0}
 --- !u!1 &8268355393084189432
 GameObject:
   m_ObjectHideFlags: 0
